@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="my.hhx.com.chunnews.modules.setting.ThemeActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/theme_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@color/colorPrimaryDark"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?actionBarSize"
+        android:paddingTop="20dp"
+        app:popupTheme="@style/AppTheme.PopupOverlay"/>
+    <FrameLayout
+        android:paddingTop="10dp"
+        android:id="@+id/theme_default_fl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="22dp"
+            android:text="默认"
+            android:textColor="@color/md_cyan_900_color_code"
+            android:textSize="17sp" />
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="22dp"
+            android:layout_gravity="right"
+            android:background="@color/md_cyan_900_color_code"
+             />
+
+    </FrameLayout>
+    <TextView
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider"/>
+
+    <!--黑色-->
+    <FrameLayout
+        android:paddingTop="10dp"
+        android:id="@+id/theme_black_fl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="22dp"
+            android:text="深沉黑"
+            android:textColor="@color/md_black_color_code"
+            android:textSize="17sp" />
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="22dp"
+            android:layout_gravity="right"
+            android:background="@color/md_black_color_code"
+            />
+
+    </FrameLayout>
+    <TextView
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider"/>
+
+    <FrameLayout
+        android:paddingTop="10dp"
+        android:id="@+id/theme_red_fl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="22dp"
+            android:text="姨妈红"
+            android:textColor="#ce0f00"
+            android:textSize="17sp" />
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="22dp"
+            android:layout_gravity="right"
+            android:background="#ce0f00"
+            />
+
+    </FrameLayout>
+    <TextView
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider"/>
+
+    <FrameLayout
+        android:paddingTop="10dp"
+        android:id="@+id/theme_green_fl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="22dp"
+            android:text="原谅绿"
+            android:textColor="@color/md_green_500_color_code"
+            android:textSize="17sp" />
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="22dp"
+            android:layout_gravity="right"
+            android:background="@color/md_green_500_color_code"
+            />
+
+    </FrameLayout>
+    <TextView
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider"/>
+
+    <FrameLayout
+        android:paddingTop="10dp"
+        android:id="@+id/theme_orange_fl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="22dp"
+            android:text="橘子橙"
+            android:textColor="@color/md_orange_400_color_code"
+            android:textSize="17sp" />
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="22dp"
+            android:layout_gravity="right"
+            android:background="@color/md_orange_400_color_code"
+            />
+
+    </FrameLayout>
+    <TextView
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider"/>
+
+    <FrameLayout
+        android:paddingTop="10dp"
+        android:id="@+id/theme_blue_fl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="22dp"
+            android:text="天空蓝"
+            android:textColor="@color/md_light_blue_900_color_code"
+            android:textSize="17sp" />
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="22dp"
+            android:layout_gravity="right"
+            android:background="@color/md_light_blue_900_color_code"
+            />
+
+    </FrameLayout>
+    <TextView
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider"/>
+
+    <FrameLayout
+        android:paddingTop="10dp"
+        android:id="@+id/theme_pink_fl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="22dp"
+            android:text="少女粉"
+            android:textColor="@color/md_pink_400_color_code"
+            android:textSize="17sp" />
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="22dp"
+            android:layout_gravity="right"
+            android:background="@color/md_pink_400_color_code"
+            />
+
+    </FrameLayout>
+    <TextView
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider"/>
+
+
+</LinearLayout>

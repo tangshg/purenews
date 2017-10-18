@@ -89,7 +89,7 @@ public class WebUtil {
             for (int i = 0; i < video.size(); i++) {
                 String a = "<!--VIDEO#" + i + "-->";
                 String b = video.get(i).getCover();
-                content = content.replace(a, "<video controls=\"\" autoplay=\"\" name=\"media\" poster=\""+b+"\"><source src=\"" + video.get(i).getUrl_mp4() + "\" type=\"video/mp4\"></video>");
+                content = content.replace(a, "<video controls=\"\" autoplay=\"\" preload=\"none\" name=\"media\" poster=\""+b+"\"><source src=\"" + video.get(i).getUrl_mp4() + "\" type=\"video/mp4\"></video>");
 
             }
         }

@@ -72,7 +72,7 @@ public class ZhihuArticleActivity extends AppCompatActivity implements ZhihuArti
         setContentView(R.layout.activity_wangyi_article);
         ParallaxBackLayout layout = ParallaxHelper.getParallaxBackLayout(this, true);
         layout.setEdgeMode(EDGE_MODE_FULL);//全屏滑动
-        layout.setScrollThresHold((float) 0.28);
+        layout.setScrollThresHold((float) 0.3);
         ButterKnife.bind(this);
         setTitle(null);
         setSupportActionBar(toolbar);

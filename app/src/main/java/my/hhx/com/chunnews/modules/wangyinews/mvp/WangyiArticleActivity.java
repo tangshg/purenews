@@ -73,7 +73,7 @@ public class WangyiArticleActivity extends AppCompatActivity implements WangyiAr
         setContentView(R.layout.activity_wangyi_article);
         ParallaxBackLayout layout = ParallaxHelper.getParallaxBackLayout(this, true);
         layout.setEdgeMode(EDGE_MODE_FULL);//全屏滑动
-        layout.setScrollThresHold((float) 0.28);
+        layout.setScrollThresHold((float) 0.3);
         unbind = ButterKnife.bind(this);
 
     }

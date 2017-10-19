@@ -74,7 +74,7 @@ public class ItArticleActivity extends AppCompatActivity implements ItArticleCon
         ButterKnife.bind(this);
         ParallaxBackLayout layout = ParallaxHelper.getParallaxBackLayout(this, true);
         layout.setEdgeMode(EDGE_MODE_FULL);//全屏滑动
-        layout.setScrollThresHold((float) 0.28);
+        layout.setScrollThresHold((float) 0.3);
 
         initView();
         initweb();

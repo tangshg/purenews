@@ -116,7 +116,7 @@ public class IthomeListFragment extends Fragment implements IthomeListContract.V
             Log.e("refreshFail","it");
             return;
         }
-        Toast.makeText(getContext(), "加载错误", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), "It之家加载错误", Toast.LENGTH_SHORT).show();
     }
 
     @Override

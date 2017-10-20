@@ -6,7 +6,7 @@
     android:background="@color/md_white_color_code">
 
     <android.support.v7.widget.CardView
-        android:id="@+id/zhihu_daily_item"
+        android:id="@+id/card_news_item"
         android:layout_width="match_parent"
         android:background="@color/background"
         android:layout_height="100dp"
@@ -26,7 +26,7 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/zhihu_daily_item_iv"
+                android:id="@+id/card_news_item_iv"
                 android:layout_width="90dp"
                 android:layout_height="90dp"
                 android:layout_marginBottom="4dp"
@@ -40,7 +40,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/zhihu_daily_item_title_tv"
+                    android:id="@+id/card_news_item_title_tv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="6dp"
@@ -67,7 +67,7 @@
                         android:textSize="11sp" />
 
                     <TextView
-                        android:id="@+id/zhihu_daily_item_time_tv"
+                        android:id="@+id/card_news_item_time_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"

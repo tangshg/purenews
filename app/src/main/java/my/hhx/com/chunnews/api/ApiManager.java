@@ -29,7 +29,7 @@ public class ApiManager {
     private ITHomeApi mItHomeApi;
     private WangyiNewsApi mWangyiNewsApi;
     private WangyiPhotoApi mWangyiPhotoApi;
-    //private JiemianApi mJiemianApi;
+    private JiemianApi mJiemianApi;
     private static ApiManager sApiManager;
     private static final int TIMEOUT_DISCONNECT = 60 * 60 * 24 * 7; //7天
 
@@ -159,17 +159,17 @@ public class ApiManager {
         }
         return mWangyiPhotoApi;
     }
-//    public JiemianApi getJiemianService() {
-//        if (mJiemianApi == null) {
-//            mJiemianApi = new Retrofit.Builder()
-//                    .baseUrl(Config.JIEMIAN_API_URL)
-//                    .client(getOkhttpClient())
-//                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-//                    .addConverterFactory(GsonConverterFactory.create())
-//                    .build()
-//                    .create(JiemianApi.class);
-//        }
-//        return mJiemianApi;
-//    }
+    public JiemianApi getJiemianService() {
+        if (mJiemianApi == null) {
+            mJiemianApi = new Retrofit.Builder()
+                    .baseUrl(Config.JIEMIAN_API_URL)
+                    .client(getOkhttpClient())
+                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build()
+                    .create(JiemianApi.class);
+        }
+        return mJiemianApi;
+    }
 
 }

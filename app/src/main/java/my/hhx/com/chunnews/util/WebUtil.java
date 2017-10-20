@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import my.hhx.com.chunnews.modules.jiemian.mvp.JiemianArticle;
 import my.hhx.com.chunnews.modules.wangyinews.mvp.WangyiContent;
 
 /**
@@ -89,13 +90,38 @@ public class WebUtil {
             for (int i = 0; i < video.size(); i++) {
                 String a = "<!--VIDEO#" + i + "-->";
                 String b = video.get(i).getCover();
-                content = content.replace(a, "<video controls=\"\" autoplay=\"\" preload=\"none\" name=\"media\" poster=\""+b+"\"><source src=\"" + video.get(i).getUrl_mp4() + "\" type=\"video/mp4\"></video>");
+                content = content.replace(a, "<video controls=\"\" autoplay=\"\" preload=\"none\" name=\"media\" poster=\"" + b + "\"><source src=\"" + video.get(i).getUrl_mp4() + "\" type=\"video/mp4\"></video>");
 
             }
         }
         modifiedHtml.append(content);
         modifiedHtml.append("</body></html>");
 
+        return modifiedHtml.toString();
+
+    }
+
+    public static String buildHtmlForJiemian(String content, List<JiemianArticle.ResultBean.PhotosBean> image, boolean isNightMode) {
+        StringBuilder modifiedHtml = new StringBuilder();
+        modifiedHtml.append("<?xml version=\"1.0\" encoding=\"utf-8\"?>" + "<!DOCTYPE html PUBLIC \"-//WAPFORUM//DTD XHTML Mobile 1.0//EN\" \"http://www.wapforum.org/DTD/xhtml-mobile10.dtd\">"
+                + "<html xmlns=\"http://www.w3.org/1999/xhtml\">" + "<head>" + "<meta http-equiv=\"Content-Type\" content=\"application/xhtml+xml; charset=utf-8\"/>"
+                + "<meta http-equiv=\"Cache-control\" content=\"public\" />" + "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0\" />"
+                + "<link rel=\"stylesheet\" href=\"file:///android_asset/news.css\" type=\"text/css\">");
+        modifiedHtml.append("<body ");
+        if (isNightMode) {
+            modifiedHtml.append("class=\'night\'");
+        }
+        modifiedHtml.append(">");
+        if (image != null) {
+            for (int i = 0; i < image.size(); i++) {
+                String a = "[img:" + i + "]";
+                content = content.replace(a, "<img src=\"" + image.get(i).getImage() + "\" />");
+            }
+        }
+
+        modifiedHtml.append(content);
+        modifiedHtml.append("</body></html>");
+        Log.e("hhh",modifiedHtml.toString());
         return modifiedHtml.toString();
 
     }

@@ -24,16 +24,16 @@ public class ZhihuDailyCard extends HxBaseCard<ZhihuDaily.StoriesBean> {
     public HxBaseHolder onCreateViewHolder(ViewGroup parent, int viewType, HxBaseRecyclerAdapter.OnItemClickListener listener) {
         return new HxBaseHolder(LayoutInflater.
                 from(parent.getContext()).
-                inflate(R.layout.zhihu_item, parent, false),listener
+                inflate(R.layout.card_news_item, parent, false),listener
         );
     }
 
 
     @Override
     public void onBindViewHolder(HxBaseHolder holder, int position) {
-        TextView title = (TextView) holder.getView(R.id.zhihu_daily_item_title_tv);
+        TextView title = (TextView) holder.getView(R.id.card_news_item_title_tv);
         title.setText(mData.getTitle());
-        ImageView image = (ImageView) holder.getView(R.id.zhihu_daily_item_iv);
+        ImageView image = (ImageView) holder.getView(R.id.card_news_item_iv);
         String url = mData.getImages().get(0);
         Glide.with(holder.getItemView().getContext()).load(url).into(image);
     }

@@ -8,7 +8,6 @@ public interface WangyiPhotoContract {
 
     interface View {
         void loadFail();
-
         void loadSucess(WangyiPhoto wangyiPhoto);
     }
 

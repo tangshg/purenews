@@ -37,7 +37,8 @@
         <activity android:name=".modules.WebPhotoActivity" />
         <activity android:name=".modules.wangyinews.mvp.WangyiArticleActivity" />
         <activity android:name=".modules.wangyinews.mvp.WangyiPhotoActivity" />
-        <activity android:name=".modules.setting.ThemeActivity"></activity>
+        <activity android:name=".modules.setting.ThemeActivity" />
+        <activity android:name=".modules.jiemian.mvp.JiemianArticleActivity"></activity>
     </application>
 
 </manifest>

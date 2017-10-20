@@ -9,7 +9,7 @@ import org.simpleframework.xml.Root;
  */
 @Root(name = "item", strict = false)
 public class ItItem {
-    @Attribute(name = "t", required = false)
+    @Element(name = "t", required = false)
     private String t;
 
     @Element(name = "newsid")
@@ -32,6 +32,49 @@ public class ItItem {
 
     @Element(name = "image")
     private String image;
+
+    @Element(required = false, name = "imglist")
+    private String imgList;
+
+    public String getT() {
+        return t;
+    }
+
+    public void setT(String t) {
+        this.t = t;
+    }
+
+    public String getC() {
+        return c;
+    }
+
+    public void setC(String c) {
+        this.c = c;
+    }
+
+    public String getImgList() {
+        return imgList;
+    }
+
+    public void setImgList(String imgList) {
+        this.imgList = imgList;
+    }
+
+    public String getTags() {
+        return tags;
+    }
+
+    public void setTags(String tags) {
+        this.tags = tags;
+    }
+
+    public String getZ() {
+        return z;
+    }
+
+    public void setZ(String z) {
+        this.z = z;
+    }
 
     @Element(required = false, name = "description")//处理可能为空的情况
     private String description;

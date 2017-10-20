@@ -3,13 +3,16 @@ package my.hhx.com.chunnews.modules.ithome.mvp;
 import android.util.Log;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
 import my.hhx.com.chunnews.api.ApiManager;
+import my.hhx.com.chunnews.util.DateUtils;
 import my.hhx.com.chunnews.util.ITHomeUtils;
 
 /**
@@ -34,6 +37,19 @@ public class IthomeListPresenter implements IthomeListContract.Presenter {
                 .getITHomeMore(mTag, ITHomeUtils.getMinNewsId(mLastId))
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
+                .map(new Function<ITResponse, ITResponse>() {
+                    @Override
+                    public ITResponse apply(@NonNull ITResponse itResponse) throws Exception {
+                        Iterator<ItItem> itItemIterator = itResponse.getChannel().getItItems().iterator();
+                        while (itItemIterator.hasNext()){
+                            ItItem itItem=itItemIterator.next();
+                            String pt = itItem.getPostdate();
+                            itItem.setPostdate(DateUtils.date2RelativeTime(pt));
+                        }
+
+                        return itResponse;
+                    }
+                })
                 .subscribe(new Observer<ITResponse>() {
                     @Override
                     public void onSubscribe(@NonNull Disposable d) {
@@ -52,6 +68,7 @@ public class IthomeListPresenter implements IthomeListContract.Presenter {
 
                     @Override
                     public void onError(@NonNull Throwable e) {
+                        Log.e("ItHomeListLoadError",e.getMessage());
                         mView.loadMoreFail();
                     }
 
@@ -75,6 +92,19 @@ public class IthomeListPresenter implements IthomeListContract.Presenter {
                 .getITHomeNewest(mTag)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
+                .map(new Function<ITResponse, ITResponse>() {
+                    @Override
+                    public ITResponse apply(@NonNull ITResponse itResponse) throws Exception {
+                        Iterator<ItItem> itItemIterator = itResponse.getChannel().getItItems().iterator();
+                        while (itItemIterator.hasNext()){
+                            ItItem itItem=itItemIterator.next();
+                            String pt = itItem.getPostdate();
+                            itItem.setPostdate(DateUtils.date2RelativeTime(pt));
+                        }
+
+                        return itResponse;
+                    }
+                })
                 .subscribe(new Observer<ITResponse>() {
                     @Override
                     public void onSubscribe(@NonNull Disposable d) {
@@ -92,6 +122,7 @@ public class IthomeListPresenter implements IthomeListContract.Presenter {
 
                     @Override
                     public void onError(@NonNull Throwable e) {
+                        Log.e("ItHomeListRefreshError",e.getMessage());
                         mView.refreshFail();
                     }
 

@@ -29,7 +29,7 @@ public class Config {
     public static final String ITHOME_API_URL = "http://api.ithome.com/";
     public static Setting setting;
 
-    public static final String JIEMIAN_API_URL="https://appapi.jiemian.com/v4/5.0.0/10001/cate/";
+    public static final String JIEMIAN_API_URL="https://appapi.jiemian.com/v4/5.0.0/10001/";
 
 
 }

@@ -29,7 +29,7 @@ public class WangyiNewsRecyclerAdapter extends BaseMultiItemQuickAdapter<WangyiN
     public WangyiNewsRecyclerAdapter(@Nullable List<WangyiNews.Bean> data) {
         super(data);
         addItemType(WangyiNews.Bean.BANNER, R.layout.banner_item);
-        addItemType(WangyiNews.Bean.ITEM, R.layout.zhihu_item);
+        addItemType(WangyiNews.Bean.ITEM, R.layout.card_news_item);
 
 
     }
@@ -111,12 +111,12 @@ public class WangyiNewsRecyclerAdapter extends BaseMultiItemQuickAdapter<WangyiN
 
                 break;
             case WangyiNews.Bean.ITEM:
-                GlideApp.with(mContext).load(item.getImgsrc()).centerCrop().into((ImageView) helper.getView(R.id.zhihu_daily_item_iv));
+                GlideApp.with(mContext).load(item.getImgsrc()).centerCrop().into((ImageView) helper.getView(R.id.card_news_item_iv));
 //                if (item.getRead() != 1) {
 //
 //                }
-                helper.setText(R.id.zhihu_daily_item_title_tv, item.getTitle());
-                helper.setText(R.id.zhihu_daily_item_time_tv, item.getMtime());
+                helper.setText(R.id.card_news_item_title_tv, item.getTitle());
+                helper.setText(R.id.card_news_item_time_tv, item.getMtime());
                 helper.setText(R.id.news_source, item.getSource());
                 break;
             default:

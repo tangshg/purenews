@@ -18,15 +18,15 @@ import my.hhx.com.chunnews.modules.ithome.mvp.ItItem;
 public class IthomeListRecyclerAdapter extends BaseQuickAdapter<ItItem, BaseViewHolder> {
 
     public IthomeListRecyclerAdapter(List<ItItem> data) {
-        super(R.layout.zhihu_item, data);
+        super(R.layout.card_news_item, data);
     }
 
 
 
     @Override
     protected void convert(BaseViewHolder helper, ItItem item) {
-        helper.setText(R.id.zhihu_daily_item_title_tv, item.getTitle());
-        Glide.with(mContext).load(item.getImage()).into((ImageView) helper.getView(R.id.zhihu_daily_item_iv));
-        helper.setText(R.id.zhihu_daily_item_time_tv,item.getPostdate());
+        helper.setText(R.id.card_news_item_title_tv, item.getTitle());
+        Glide.with(mContext).load(item.getImage()).into((ImageView) helper.getView(R.id.card_news_item_iv));
+        helper.setText(R.id.card_news_item_time_tv,item.getPostdate());
     }
 }

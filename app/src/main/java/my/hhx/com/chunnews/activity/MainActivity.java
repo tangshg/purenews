@@ -17,6 +17,7 @@ import com.yanzhenjie.permission.RationaleListener;
 
 import my.hhx.com.chunnews.R;
 import my.hhx.com.chunnews.modules.ithome.mvp.IthomeFragment;
+import my.hhx.com.chunnews.modules.jiemian.mvp.JiemianFragment;
 import my.hhx.com.chunnews.modules.news.NewsFragment;
 import my.hhx.com.chunnews.modules.setting.SettingFragment;
 
@@ -27,6 +28,7 @@ public class MainActivity extends DrawerActivity
     private FragmentManager mFragmentManager;
     private Fragment currentFragment;
     private Fragment mSettingFragment;
+    private Fragment mJiemianFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,6 +100,13 @@ public class MainActivity extends DrawerActivity
                 }
                 replaceFragment(mNewsFragment);
                 currentFragment = mNewsFragment;
+                break;
+            case R.id.nav_jiemain:
+                if (mJiemianFragment == null) {
+                    mJiemianFragment = new JiemianFragment();
+                }
+                replaceFragment(mJiemianFragment);
+                currentFragment = mJiemianFragment;
                 break;
             case R.id.nav_setting:
                 if (mSettingFragment == null) {

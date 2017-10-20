@@ -33,7 +33,7 @@ public class ZhiHuDailyRecyclerAdapter extends RecyclerView.Adapter {
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return new ViewHolder(
                 LayoutInflater.from(mContext)
-                        .inflate(R.layout.zhihu_item, parent, false));
+                        .inflate(R.layout.card_news_item, parent, false));
     }
 
     @Override
@@ -49,13 +49,13 @@ public class ZhiHuDailyRecyclerAdapter extends RecyclerView.Adapter {
 
 
     static class ViewHolder extends RecyclerView.ViewHolder{
-        @BindView(R.id.zhihu_daily_item_iv)
+        @BindView(R.id.card_news_item_iv)
         ImageView zhihuDailyItemIv;
-        @BindView(R.id.zhihu_daily_item_title_tv)
+        @BindView(R.id.card_news_item_title_tv)
         TextView zhihuDailyItemTitleTv;
-        @BindView(R.id.zhihu_daily_item_time_tv)
+        @BindView(R.id.card_news_item_time_tv)
         TextView zhihuDailyItemTimeTv;
-        @BindView(R.id.zhihu_daily_item)
+        @BindView(R.id.card_news_item)
         CardView zhihuDailyItem;
 
         ViewHolder(View view) {

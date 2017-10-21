@@ -56,7 +56,7 @@ public class WangyiNewsPresenter implements WangyiNewsContract.Presenter {
                             String mt = bean.getMtime();
                             String before = DateUtils.date2RelativeTime(mt);
                             bean.setMtime(before);
-                            if ("超过一年".contains(before)) {
+                            if ("超过一年".equals(before)||"live".equals(bean.getSkipType())) {
                                beanIterator.remove();
                             }
 
@@ -111,7 +111,7 @@ public class WangyiNewsPresenter implements WangyiNewsContract.Presenter {
                             String mt = bean.getMtime();
                             String before = DateUtils.date2RelativeTime(mt);
                             bean.setMtime(before);
-                            if ("超过一年".contains(before)) {
+                            if ("超过一年".equals(before)||"live".equals(bean.getSkipType())) {
                                 beanIterator.remove();
                             }
 

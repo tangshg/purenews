@@ -41,10 +41,13 @@ public class IthomeListPresenter implements IthomeListContract.Presenter {
                     @Override
                     public ITResponse apply(@NonNull ITResponse itResponse) throws Exception {
                         Iterator<ItItem> itItemIterator = itResponse.getChannel().getItItems().iterator();
-                        while (itItemIterator.hasNext()){
-                            ItItem itItem=itItemIterator.next();
+                        while (itItemIterator.hasNext()) {
+                            ItItem itItem = itItemIterator.next();
                             String pt = itItem.getPostdate();
                             itItem.setPostdate(DateUtils.date2RelativeTime(pt));
+                            if (itItem.getUrl().contains("digi") || itItem.getTitle().contains("辣品")) {
+                                itItemIterator.remove();
+                            }
                         }
 
                         return itResponse;
@@ -68,7 +71,7 @@ public class IthomeListPresenter implements IthomeListContract.Presenter {
 
                     @Override
                     public void onError(@NonNull Throwable e) {
-                        Log.e("ItHomeListLoadError",e.getMessage());
+                        Log.e("ItHomeListLoadError", e.getMessage());
                         mView.loadMoreFail();
                     }
 
@@ -96,10 +99,14 @@ public class IthomeListPresenter implements IthomeListContract.Presenter {
                     @Override
                     public ITResponse apply(@NonNull ITResponse itResponse) throws Exception {
                         Iterator<ItItem> itItemIterator = itResponse.getChannel().getItItems().iterator();
-                        while (itItemIterator.hasNext()){
-                            ItItem itItem=itItemIterator.next();
+                        while (itItemIterator.hasNext()) {
+                            ItItem itItem = itItemIterator.next();
                             String pt = itItem.getPostdate();
                             itItem.setPostdate(DateUtils.date2RelativeTime(pt));
+                            if (itItem.getUrl().contains("digi") || itItem.getTitle().contains("辣品")) {
+                                itItemIterator.remove();
+                            }
+
                         }
 
                         return itResponse;
@@ -122,7 +129,7 @@ public class IthomeListPresenter implements IthomeListContract.Presenter {
 
                     @Override
                     public void onError(@NonNull Throwable e) {
-                        Log.e("ItHomeListRefreshError",e.getMessage());
+                        Log.e("ItHomeListRefreshError", e.getMessage());
                         mView.refreshFail();
                     }
 

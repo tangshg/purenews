@@ -103,7 +103,7 @@ public class IthomeListPresenter implements IthomeListContract.Presenter {
                             ItItem itItem = itItemIterator.next();
                             String pt = itItem.getPostdate();
                             itItem.setPostdate(DateUtils.date2RelativeTime(pt));
-                            if (itItem.getUrl().contains("digi") || itItem.getTitle().contains("辣品")) {
+                            if (itItem.getUrl().contains("lapin") || itItem.getTitle().contains("辣品")) {
                                 itItemIterator.remove();
                             }
 
@@ -121,6 +121,7 @@ public class IthomeListPresenter implements IthomeListContract.Presenter {
                     @Override
                     public void onNext(@NonNull ITResponse itResponse) {
                         mList = itResponse.getChannel().getItItems();
+                        Log.e("size", String.valueOf(mList.size()));
                         mLastId = mList.get(mList.size() - 1).getNewsid();
                         Log.e("itPressent", mLastId);
                         Log.e("itPressent", mList.get(0).toString());

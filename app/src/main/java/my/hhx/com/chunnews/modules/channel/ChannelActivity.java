@@ -23,6 +23,7 @@ import my.hhx.com.chunnews.R;
 
 public class ChannelActivity extends AppCompatActivity {
 
+
     @BindView(R.id.channel_recycler)
     RecyclerView channelRecycler;
     private String myTitle[] = new String[]{"最新", "评测室", "安卓", "手机", "数码"};
@@ -46,7 +47,7 @@ public class ChannelActivity extends AppCompatActivity {
     private String otherJiemianTag[] = new String[]{"117", "181", "138", "121", "137", "139", "322", "183",
             "259", "495", "550", "293", "120", "119", "182", "201", "442", "124", "152"
             , "202", "203", "406", "313", "447", "469", "470", "294", "158", "519", "142", "140", "463", "643"};
-
+    private static final int SAVE_TIME= 60*60*24*30*12*20;
     private ArrayList<ChannelEntity> allList = new ArrayList<>();
     private ArrayList<ChannelEntity> myList = new ArrayList<>();
     private ArrayList<ChannelEntity> otherList = new ArrayList<>();
@@ -101,20 +102,20 @@ public class ChannelActivity extends AppCompatActivity {
                 switch (mTag) {
                     case "it":
                         cacheUtil = CacheUtils.getInstance("channel");
-                        cacheUtil.put("myChannel", myChannelItems);
-                        cacheUtil.put("otherChannel", otherChannelItems);
+                        cacheUtil.put("myChannel", myChannelItems,SAVE_TIME);
+                        cacheUtil.put("otherChannel", otherChannelItems,SAVE_TIME);
                         EventBus.getDefault().post(new MessageEvent("refreshFragment"));
                         break;
                     case "news":
                         cacheUtil = CacheUtils.getInstance("channel");
-                        cacheUtil.put("myNewsChannel", myChannelItems);
-                        cacheUtil.put("otherNewsChannel", otherChannelItems);
+                        cacheUtil.put("myNewsChannel", myChannelItems,SAVE_TIME);
+                        cacheUtil.put("otherNewsChannel", otherChannelItems,SAVE_TIME);
                         EventBus.getDefault().post(new MessageEvent("refreshNews"));
                         break;
                     case "jiemian":
                         cacheUtil = CacheUtils.getInstance("channel");
-                        cacheUtil.put("myJiemianChannel", myChannelItems);
-                        cacheUtil.put("otherJiemianChannel", otherChannelItems);
+                        cacheUtil.put("myJiemianChannel", myChannelItems,SAVE_TIME);
+                        cacheUtil.put("otherJiemianChannel", otherChannelItems,SAVE_TIME);
                         EventBus.getDefault().post(new MessageEvent("refreshJiemian"));
                         break;
                     default:

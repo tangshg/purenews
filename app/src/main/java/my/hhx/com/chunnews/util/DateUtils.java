@@ -33,7 +33,6 @@ public class DateUtils {
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         long delta = 0L;
         try {
-            Log.e("222", String.valueOf(format.parse(date).getTime()));
             delta = new Date().getTime() - format.parse(date).getTime();
         } catch (ParseException e) {
             e.printStackTrace();
@@ -81,7 +80,6 @@ public class DateUtils {
     }
 
     private static String delta2RelativeTime(long delta) {
-        Log.e("delta", String.valueOf(delta));
         if ((delta / ONE_MINUTE) < 60) {
             return delta / ONE_MINUTE + BEFORE_MINUTE;
         }

@@ -37,7 +37,7 @@
                 android:paddingRight="24dp"
                 android:paddingTop="110dp"
                 android:textColor="@color/md_white_color_code"
-                android:textSize="28sp" />
+                android:textSize="24sp" />
 
 
             <android.support.v7.widget.Toolbar

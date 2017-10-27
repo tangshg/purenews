@@ -45,7 +45,7 @@ public class IthomeListPresenter implements IthomeListContract.Presenter {
                             ItItem itItem = itItemIterator.next();
                             String pt = itItem.getPostdate();
                             itItem.setPostdate(DateUtils.date2RelativeTime(pt));
-                            if (itItem.getUrl().contains("digi") || itItem.getTitle().contains("辣品")) {
+                            if (itItem.getUrl().contains("lapin") || itItem.getTitle().contains("辣品")) {
                                 itItemIterator.remove();
                             }
                         }

@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chunNews-master-3414fcb973fae873241ac8689568087a0fd6026c.iml" filepath="$PROJECT_DIR$/chunNews-master-3414fcb973fae873241ac8689568087a0fd6026c.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chunNews.iml" filepath="$PROJECT_DIR$/chunNews.iml" />
     </modules>
   </component>
 </project>

@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/md_black_color_code"
-    tools:context="my.hhx.com.chunnews.modules.wangyinews.mvp.WangyiPhotoActivity">
+    tools:context=".modules.wangyinews.mvp.WangyiPhotoActivity">
 
-    <my.hhx.com.chunnews.ui.MyViewPager
+    <com.hhx.pureNews.ui.MyViewPager
         android:id="@+id/wangyi_photo_view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

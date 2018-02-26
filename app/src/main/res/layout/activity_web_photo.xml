@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/md_black_color_code"
-    tools:context="my.hhx.com.chunnews.modules.WebPhotoActivity">
+    tools:context=".modules.WebPhotoActivity">
 
-    <my.hhx.com.chunnews.ui.MyViewPager
+    <com.hhx.pureNews.ui.MyViewPager
         android:id="@+id/web_photo_view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
 
-    </my.hhx.com.chunnews.ui.MyViewPager>
+    </com.hhx.pureNews.ui.MyViewPager>
 
     <FrameLayout
         android:layout_gravity="bottom"

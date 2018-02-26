@@ -18,6 +18,7 @@
         </item>
         <item name="colorControlNormal">@color/md_white_color_code</item>
         <item name="drawerArrowStyle">@style/AppTheme.DrawerArrowToggle</item>
+        <!--<item name="android:windowNoTitle">true</item>-->
         <!--<item name="android:textColorPrimary">@color/md_white_color_code</item>-->
     </style>
 

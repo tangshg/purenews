@@ -6,6 +6,7 @@
     <string name="icons">&#x3605; &#x35ad; &#x35ae; &#x35af;</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_article">ArticleActivity</string>
+    <string name="message_permission_rationale">权限申请</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
 

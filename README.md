@@ -1,5 +1,5 @@
 # MyNewspaper
-因作者工作重心改变，改app目前已经停止更新
+## 因作者工作重心改变，该app目前已经停止更新
 ![输入图片说明](https://images.gitee.com/uploads/images/2018/0805/221901_f048bf99_807567.png "主页面")
 ### 整合
 - 整合网易新闻，it之家等热门新闻源
